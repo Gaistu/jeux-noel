@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Family Games</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>🎄 Christmas Family Games 🎅</h1>
+        <p>Perfect for a Festive Family Night!</p>
+    </header>
+
+    <div class="container">
+        <h2>Game List</h2>
+        <ul>
+            <li>
+                <a href="christmas-quiz.html" class="game-card">
+                    <div>
+                        <h3>1. Christmas Quiz</h3>
+                        <p>Testez vos connaissances sur Noël et l’hiver ! Chaque équipe a 10 secondes pour répondre. Si
+                            l'équipe donne une bonne réponse, elle marque 1 point.</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="santas-mimes.html" class="game-card">
+                    <div>
+                        <h3>2. Santa’s Mimes</h3>
+                        <p>Chaque équipe mime des actions liées à Noël (ex. : décorer un sapin, ouvrir un cadeau). Les
+                            coéquipiers doivent deviner dans un temps limité (1 minute). L’équipe qui devine le plus de
+                            mots remporte la manche.</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="christmas-pictionary.html" class="game-card">
+                    <div>
+                        <h3>3. Christmas Pictionary</h3>
+                        <p>Chaque équipe doit deviner ce que l’un de ses membres dessine dans un temps limité (1
+                            minute). Les thèmes incluent des objets ou scènes de Noël.</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="festive-charades.html" class="game-card">
+                    <div>
+                        <h3>4. Festive Charades</h3>
+                        <p>Première manche : On décrit avec des mots. Deuxième manche : On mime sans parler. Troisième
+                            manche : On peut dire un seul mot. L’équipe qui devine le plus de mots gagne.</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="winter-riddles.html" class="game-card">
+                    <div>
+                        <h3>5. Winter Riddles</h3>
+                        <p>Chaque équipe reçoit une énigme sur le thème de l’hiver et Noël. Si elle trouve la réponse
+                            dans le temps imparti (30 secondes à 1 minute), elle gagne 1 point.</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <h2>Live Scoreboard</h2>
+        <table id="scoreboard">
+            <thead>
+                <tr>
+                    <th>Place</th>
+                    <th>Team</th>
+                    <th>Score</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-team="zinzins">
+                    <td class="place">1</td>
+                    <td>Les Zinzins</td>
+                    <td class="score" id="zinzins-score">0</td>
+                    <td>
+                        <button onclick="updateScore('zinzins', 1)">+1</button>
+                        <button onclick="updateScore('zinzins', -1)">-1</button>
+                    </td>
+                </tr>
+                <tr data-team="nazes">
+                    <td class="place">2</td>
+                    <td>Les Nazes</td>
+                    <td class="score" id="nazes-score">0</td>
+                    <td>
+                        <button onclick="updateScore('nazes', 1)">+1</button>
+                        <button onclick="updateScore('nazes', -1)">-1</button>
+                    </td>
+                </tr>
+                <tr data-team="boucles">
+                    <td class="place">3</td>
+                    <td>Les Bouclés</td>
+                    <td class="score" id="boucles-score">0</td>
+                    <td>
+                        <button onclick="updateScore('boucles', 1)">+1</button>
+                        <button onclick="updateScore('boucles', -1)">-1</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="trophies">
+            <p>🥇 Gold: <span id="gold">-</span></p>
+            <p>🥈 Silver: <span id="silver">-</span></p>
+            <p>🥉 Bronze: <span id="bronze">-</span></p>
+        </div>
+    </div>
+
+    <div id="podium" style="display: none; text-align: center;">
+        <div id="bronze" style="opacity: 0; transition: opacity 1s;">
+            <h2>🥉 Third: <span>-</span></h2>
+        </div>
+        <div id="silver" style="opacity: 0; transition: opacity 1s;">
+            <h2>🥈 Second: <span>-</span></h2>
+        </div>
+        <div id="gold" style="opacity: 0; transition: opacity 1s;">
+            <h2>🥇 First: <span>-</span></h2>
+        </div>
+    </div>
+</body>
+
+</html>
